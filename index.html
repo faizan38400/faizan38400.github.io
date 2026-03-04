@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faizan Signature Fragrances</title>
+
+<style>
+body{
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.card{
+    background:#111;
+    width:320px;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    color:white;
+    box-shadow:0px 0px 20px gold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.card img{
+    width:200px;
+    border-radius:10px;
+    transition: transform 0.5s;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}
+
+button{
+    background:gold;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    margin-top:10px;
+    width:95%;
+    transition: 0.3s;
+}
+
+button:hover{
+    box-shadow:0px 0px 20px gold;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1 style="color:gold;">Faizan Signature Fragrances</h1>
+
+    <img src="perfume.png">
+
+    <p style="color:gold;">Premium Attar Collection</p>
+
+    <p>White Oud - 999 Rs</p>
+    <p>Blue Oud - 1190 Rs</p>
+    <p>Royal Musk - 1200 Rs</p>
+    <p>Oud e Safeer - 1099 Rs</p>
+   <p style="color: greenyellow;">more....</p>
+    
+<input type="text" id="name" placeholder="Your Name"
+           style="width: 90%; padding: 8px; margin: 5px; border-radius: 5px; border: none;"><br>
+
+    <select id="perfume"
+            style="width: 95%; padding: 8px; margin: 5px; border-radius: 5px; border: none;">
+        <option>White Oud - 999 Rs</option>
+        <option>Blue Oud - 1190 Rs</option>
+        <option>Royal Musk - 1200 Rs</option>
+        <option>Oud e safeer - 1099 Rs</option>
+    </select><br>
+
+    <button onclick="sendToWhatsApp()" 
+            style="background-color: gold; 
+                   padding: 10px; 
+                   border: none; 
+                   border-radius: 8px; 
+                   margin-top: 10px; 
+                   width: 95%;">
+        Order Now
+    </button>
+
+</div>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var perfume = document.getElementById("perfume").value;
+    var message = "Name: " + name + "%0AOrder: " + perfume;
+    var phone = "923183979460";  //
+    window.open("https://wa.me/" + phone + "?text=" + message);
+}
+</script>
+
+</body>
+</html>
+</div>
+
+</body>
+</html>
